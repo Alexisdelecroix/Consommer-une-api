@@ -1,5 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-
 window.onload = function () {
     async function httpGet(url) {
         const query = await fetch(url, {
