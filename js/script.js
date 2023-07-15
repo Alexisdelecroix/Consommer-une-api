@@ -1,11 +1,19 @@
 window.onload = function () {
+
+
+    // Function Fetch
     async function httpGet(url) {
+
+        // Création d'un nouvelle objet 
+    const headers = new Headers();
+
+    // Append(name, value)
+    headers.append("Content-Type", "application/json");
         const query = await fetch(url, {
             method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: headers
         });
+
         console.log(query);
         const response = await query.json();
         return response;
@@ -14,9 +22,9 @@ window.onload = function () {
     let resultat = document.getElementById("card");
     let modal = document.getElementById("modal");
     let nb = 12;
-    // let url = "https://reqres.in/api/users?per_page=" + nb + "";
     let url = `https://reqres.in/api/users?per_page=${nb}`;
 
+    
     function afficherLesCartes() {
         const response = httpGet(url);
         if (!response) {
@@ -38,10 +46,9 @@ window.onload = function () {
 
                 cards.forEach((element, index) => {
                     element.addEventListener("click", () => {
-                        console.log("coucou");
                         modal.classList.add("active");
 
-                        data.data.forEach((element) => {
+                        data.data.forEach(() => {
                             const selectedPerson = data.data[index];
                             modal.innerHTML = `<div id="description"> 
                           <i id="fermeture" class="fa-solid fa-xmark"></i>
