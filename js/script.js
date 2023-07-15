@@ -1,12 +1,9 @@
 window.onload = function () {
 
-
     // Function Fetch
     async function httpGet(url) {
-
         // Création d'un nouvelle objet 
     const headers = new Headers();
-
     // Append(name, value)
     headers.append("Content-Type", "application/json");
         const query = await fetch(url, {
