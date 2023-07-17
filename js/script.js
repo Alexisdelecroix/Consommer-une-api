@@ -40,7 +40,7 @@ window.onload = function () {
                     id++;
                 });
                 const cards = document.querySelectorAll(".presentation");
-                // console.log(cards.length);
+                console.log(cards);
 
                 cards.forEach((element, index) => {
                     element.addEventListener("click", () => {
@@ -54,7 +54,8 @@ window.onload = function () {
                             <img src="${selectedPerson.avatar}" alt="Photo de ${selectedPerson.first_name} ${selectedPerson.last_name}" />
                             <p>${selectedPerson.first_name} ${selectedPerson.last_name}</p>
                             <p>${selectedPerson.email}</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, earum? Veritatis, repellat, in autem quos iure</p>
+                            <p>Je suis ${selectedPerson.first_name} ${selectedPerson.last_name} j'adore la programmation veillez me contacter 
+                            via mon mail ici : ${selectedPerson.email}</p>
                           </div>
                         </div>`;
                         });
