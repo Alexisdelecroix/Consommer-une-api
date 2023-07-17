@@ -6,13 +6,14 @@ window.onload = function () {
     const headers = new Headers();
     // Append(name, value)
     headers.append("Content-Type", "application/json");
-        const query = await fetch(url, {
+        const query = await fetch(url,
+             {
             method: "GET",
             headers: headers
         });
-
         console.log(query);
         const response = await query.json();
+        // console.log(response);
         return response;
     }
 
@@ -39,7 +40,7 @@ window.onload = function () {
                     id++;
                 });
                 const cards = document.querySelectorAll(".presentation");
-                console.log(cards.length);
+                // console.log(cards.length);
 
                 cards.forEach((element, index) => {
                     element.addEventListener("click", () => {
@@ -70,3 +71,4 @@ window.onload = function () {
     }
     afficherLesCartes();
 };
+
