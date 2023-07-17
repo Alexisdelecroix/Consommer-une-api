@@ -61,7 +61,7 @@ window.onload = function () {
                         });
 
                         let fermeture = document.getElementById("fermeture");
-                        console.log(fermeture);
+                        // console.log(fermeture);
                         fermeture.addEventListener("click", () => {
                             modal.classList.remove("active");
                         });
